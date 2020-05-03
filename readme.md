@@ -9,7 +9,7 @@
     * [ ] Multi-Char Operators
     * [ ] Comments
 * Parser
-* Abstract Syntrax Tree
+* Abstract Syntax Tree
 * ASM Conversion
 * Compiler Warning/Error System
     * [ ] Column, Row Specified Error Output  

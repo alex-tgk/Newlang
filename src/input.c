@@ -1,26 +1,24 @@
 #include "input.h"
-#include "error.h"
-#include <stdlib.h>
-#include <unistd.h>
+#include <io.h>
 
 FILE *file;
-char* _filename;
+char* filename;
 
 void open_file()
 {
-    if (access(_filename, F_OK ) == -1) {
+    if (access(filename, F_OK ) == -1) {
         printf("Input: File doesn't exist!");
     }
 
-    file = fopen(_filename, "r");
+    file = fopen(filename, "r");
 }
 
-void set_file(char* filename) {
-    _filename = filename;
+void set_file(char* file) {
+    filename = file;
 }
 
 char* get_filename() {
-    return _filename;
+    return filename;
 }
 
 FILE *get_file()

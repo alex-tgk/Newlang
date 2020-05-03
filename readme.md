@@ -11,32 +11,31 @@
 * Parser
 * Abstract Syntrax Tree
 * ASM Conversion
-* More Robust Error System
-
+* Compiler Warning/Error System
+    * [ ] Column, Row Specified Error Output  
 
 # Syntax
 
-Semicolons are non-essential.\
-The following is valid syntax:
+**Semi-Colons (Totally Optional!)**
 ```
 var customers[] = ['George'];
 customers[1] = 'John'
 customers[2] = 'Jacob';
 ```
 
-Variable declaration: 
+**Variable Declaration** 
 ```
 var UnitializedVariable;
 string VariableName = "Hello World":
 ```
 
-Comments:
+**Comments**
 ```
+// This is a single line comment.
+// This is another single line comment.
 /*
     This is a multi-line comment block.
 */
-// This is a single line comment
-// This is another single line comment
 ```
 
 

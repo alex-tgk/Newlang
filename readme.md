@@ -1,4 +1,4 @@
-#Features
+# Features
 * Lexer
     * [X] Single Operators
     * [X] Integers
@@ -14,7 +14,7 @@
 * More Robust Error System
 
 
-#Syntax
+# Syntax
 
 Semicolons are non-essential.\
 The following is valid syntax:

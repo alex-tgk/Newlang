@@ -1,13 +1,13 @@
 # Features
 * Lexer
-    * [X] Single Operators
     * [X] Integers
-    * [X] Strings
+    * [ ] Strings
     * [X] Identifiers
     * [X] Reserved Keywords
     * [ ] Decimals
-    * [ ] Multi-Char Operators
-    * [ ] Comments
+    * [X] Single Letter Operators
+    * [X] Multi-Letter Operators
+    * [X] Comments
 * Parser
 * Abstract Syntax Tree
 * ASM Conversion

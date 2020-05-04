@@ -1,32 +1,27 @@
 #include "input.h"
-#include <io.h>
+#include <stdlib.h>
 
-FILE *file;
-char* filename;
+char* p;
 
-void open_file()
-{
-    if (access(filename, F_OK ) == -1) {
-        printf("Input: File doesn't exist!");
-    }
+char *read_file(char *path) {
+    // Open and read the file.
+    FILE *fp = fopen(path, "r");
+    if (!fp)
+        printf("cannot open %s", path);
 
-    file = fopen(filename, "r");
+    int filemax = 10 * 1024 * 1024;
+    char *buf = malloc(filemax);
+    int size = fread(buf, 1, filemax - 2, fp);
+    if (!feof(fp))
+        printf("file too large");
+
+    // Make sure that the string ends with "\n\0".
+    if (size == 0 || buf[size - 1] != '\n')
+        buf[size++] = '\n';
+    buf[size] = '\0';
+    p = buf;
 }
 
-void set_file(char* file) {
-    filename = file;
-}
-
-char* get_filename() {
-    return filename;
-}
-
-FILE *get_file()
-{
-    return file;
-}
-
-void close_file()
-{
-    fclose(file);
+char *get_buffer(){
+    return p;
 }

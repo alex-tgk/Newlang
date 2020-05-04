@@ -1,2 +1,6 @@
-var test = "Here is a string;"
-var newValue = 123
+
+
+function main() {
+    var text = "Hello world!";
+    print("Hello World");
+}

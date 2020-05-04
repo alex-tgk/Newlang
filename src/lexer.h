@@ -28,12 +28,15 @@ typedef struct Token Token;
 struct Token {
     TokenKind kind;
     Token *next;
-    long numericValue;
+    long integerValue;
     char *value;
     int length;
+    
+    char *contents; // String literal contents including terminating '\0'
+    size_t contentsLength;  // string literal length
 };
 
-void LexOpenFile();
+void Tokenize();
 
 void OutputTokens();
 

@@ -3,14 +3,7 @@
 
 #include <stdio.h>
 
-void open_file();
-
-FILE *get_file();
-
-void close_file();
-
-void set_file(char *);
-
-char *get_filename();
+char *read_file(char *path);
+char *get_buffer();
 
 #endif

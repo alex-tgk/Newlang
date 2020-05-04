@@ -4,11 +4,10 @@
 #include <stdlib.h>
 #include <errno.h>
 
+
 int main() {
-    set_file("../test.nl");
-    open_file();
-    LexOpenFile();
+    read_file("../test.nl");
+    Tokenize(get_buffer());
     OutputTokens();
-    close_file();
     return 0;
 }
